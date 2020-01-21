@@ -3,6 +3,7 @@ package io.jenkins.plugins.sample;
 import javax.annotation.CheckForNull;
 
 import org.jenkinsci.Symbol;
+import org.kohsuke.stapler.StaplerProxy;
 
 import hudson.Extension;
 import hudson.model.Describable;
@@ -12,7 +13,7 @@ import jenkins.model.Jenkins;
 
 @Symbol("unicorn")
 @Extension
-public class UnicornManagement extends ManagementLink implements Describable<UnicornManagement> {
+public class UnicornManagement extends ManagementLink implements StaplerProxy {
 
     @CheckForNull
     @Override
@@ -38,18 +39,9 @@ public class UnicornManagement extends ManagementLink implements Describable<Uni
     }
 
     @Override
-    public Descriptor<UnicornManagement> getDescriptor() {
-        return Jenkins.get().getDescriptorOrDie(getClass());
+    public Object getTarget() {
+        System.out.println("Get targeted unicorn");
+        return this;
     }
 
-    @Extension
-    public static final class DescriptorImpl extends Descriptor<UnicornManagement> {
-        /**
-         * {@inheritDoc}
-         */
-        @Override
-        public String getDisplayName() {
-            return "Unicorn !";
-        }
-    }
 }
