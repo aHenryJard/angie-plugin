@@ -13,7 +13,7 @@ import jenkins.model.Jenkins;
 
 @Symbol("unicorn")
 @Extension
-public class UnicornManagement extends ManagementLink implements StaplerProxy {
+public class UnicornManagement extends ManagementLink {
 
     @CheckForNull
     @Override
@@ -30,18 +30,11 @@ public class UnicornManagement extends ManagementLink implements StaplerProxy {
     @CheckForNull
     @Override
     public String getUrlName() {
-        return "/unicorn";
+        return "unicorn";
     }
 
     @Override
     public String getDescription() {
         return "Because the world needs more unicorns !";
     }
-
-    @Override
-    public Object getTarget() {
-        System.out.println("Get targeted unicorn");
-        return this;
-    }
-
 }
