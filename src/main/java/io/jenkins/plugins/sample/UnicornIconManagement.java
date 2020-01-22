@@ -3,6 +3,7 @@ package io.jenkins.plugins.sample;
 import javax.annotation.CheckForNull;
 import javax.servlet.ServletException;
 
+import org.jenkinsci.Symbol;
 import org.kohsuke.stapler.HttpResponse;
 import org.kohsuke.stapler.StaplerRequest;
 import org.kohsuke.stapler.interceptor.RequirePOST;

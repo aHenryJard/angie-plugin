@@ -11,6 +11,8 @@
                 <select name="unicornIcon">
                     <option value="rainbow-unicorn.png">Rainbow</option>
                     <option value="blue-unicorn.png">Blue</option>
+                    <option value="yellow-unicorn.png">Yellow</option>
+                    <option value="star-unicorn.jpg">Star</option>
                 </select>
                 <j:set var="instance" value="${it}"/>
                 <f:bottomButtonBar>

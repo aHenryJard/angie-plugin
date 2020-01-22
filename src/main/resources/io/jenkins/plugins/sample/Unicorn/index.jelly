@@ -4,6 +4,29 @@
         <l:main-panel>
             <h1>You <strong>are</strong> awesome !</h1>
             <img src="${it.image}" />
+
+            <div>
+                <j:if test="${app.hasPermission(app.CONFIGURE)}">
+                    <div>
+                        <a href="../unicornNameManagement">You can change my name.</a>
+                    </div>
+                </j:if>
+
+                <j:if test="${app.hasPermission(app.ADMINISTER)}">
+                    <div>
+                        <a href="../unicornIconManagement">You can change my icon.</a>
+                    </div>
+                </j:if>
+
+                <j:if test="${!(app.hasPermission(app.ADMINISTER)||app.hasPermission(app.CONFIGURE))}">
+                    <div>
+                        <p>You can change my name with CONFIGURE permission, and my icon with ADMINISTER permission.</p>
+                    </div>
+                </j:if>
+            </div>
+
+            <div>Images credit: <a href="https://pixabay.com">pixabay</a></div>
+
         </l:main-panel>
     </l:layout>
 </j:jelly>
