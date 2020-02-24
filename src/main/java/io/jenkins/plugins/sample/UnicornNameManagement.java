@@ -55,9 +55,8 @@ public class UnicornNameManagement extends ManagementLink {
         return FormApply.success(req.getContextPath() + "/manage" );
     }
 
-    @CheckForNull
     @Override
     public Permission getRequiredPermission() {
-        return Jenkins.CONFIGURE;
+        return Jenkins.MANAGE;
     }
 }
