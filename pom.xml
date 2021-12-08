@@ -12,9 +12,9 @@
     <version>1.0-SNAPSHOT</version>
     <packaging>hpi</packaging>
     <properties>
+	    <useBeta>true</useBeta>
     	<jenkins.version>2.277</jenkins.version>
-        <java.level>8</java.level>
-	<useBeta>true</useBeta>
+      <java.level>8</java.level>
     </properties>
     <name>Angie unicorn</name>
     <!-- The default licence for Jenkins OSS Plugins is MIT. Substitute for the applicable one if needed. -->
