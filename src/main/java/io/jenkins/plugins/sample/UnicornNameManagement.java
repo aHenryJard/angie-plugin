@@ -12,6 +12,7 @@ import org.kohsuke.stapler.interceptor.RequirePOST;
 import edu.umd.cs.findbugs.annotations.NonNull;
 
 import hudson.Extension;
+import hudson.PluginManager;
 import hudson.model.Describable;
 import hudson.model.Descriptor;
 import hudson.model.ManagementLink;
