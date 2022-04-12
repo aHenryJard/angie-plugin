@@ -1,6 +1,6 @@
 # Unicorn plugin
 
-Because unicorn are so kawaï !
+Because unicorn are so kawaï !!
 
 ## Build it
 
